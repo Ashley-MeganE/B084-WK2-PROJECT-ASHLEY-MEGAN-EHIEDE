@@ -72,6 +72,7 @@ Based on information gathered during these activities, I identified the followin
 |4.| WAF Technology Exposed | Shows an attacker the architecture of the network. |🟡|
 |5.| Unsecured Webcams and Sensitive Files Exposed by Advanced Google Searches| Private cameras and PDFs are easily found using dorks, potentially giving attackers access to sensitive data|🔴|
 
+
 <sup>
  Key: 🟡 = Low  🟠 = Medium 🔴 = Critical
 </sup>
@@ -87,7 +88,7 @@ Based on information gathered during these activities, I identified the followin
 
 ## Lessons Learned
 * **Passive Reconnaissance Fundamentals:** Using Kali Linux tools like `whois`, `whatweb`, `nslookup`, and `dnsrecon` reveals critical target infrastructure such as IP addresses, DNS records, and exact CMS versions without directly alerting the target.
-* **Header & Firewall Analysis:** Fetching HTTP headers with `curl -i` exposes underlying endpoints like REST APIs, while `wafw00f` helps determine if a Web Application Firewall (WAF) is actively filtering traffic.
+* **Header & Firewall Analysis:** Fetching HTTP headers with `curl -I` exposes underlying endpoints like REST APIs, while `wafw00f` helps determine if a Web Application Firewall (WAF) is actively filtering traffic.
 * **The Power of Google Dorking (GHDB):** Advanced search operators can uncover both intentionally public resources (like academic PDFs) and sensitive, unintended exposures hidden behind standard search results.
 * **Risks of Legacy IoT Devices:** Unsecured webcams running outdated or deprecated software remain easily discoverable on the public internet, highlighting the importance of regular firmware updates and proper access controls.
 * **Ethical & Legal Boundaries in Pentesting:** Obtaining explicit written permission before scanning a target and redacting sensitive third-party data (such as exposed webcam IPs) are essential practices for responsible security research.
